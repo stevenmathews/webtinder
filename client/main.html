@@ -8,13 +8,15 @@
     {{> loginButtons}}
   </header>
 
-  <main>
-    {{#if currentUser}}
-      <div id="recommendations">
-        {{> displayRecommendations}}
-      </div>
-    {{else}}
-      {{> signIn}}
-    {{/if}}
-  </main>
+  <div class="wrapper">
+    <main>
+      {{#if currentUser}}
+        <div id="recommendations">
+          {{> displayRecommendations}}
+        </div>
+      {{else}}
+        {{> signIn}}
+      {{/if}}
+    </main>
+  </div>
 </body>

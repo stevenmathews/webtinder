@@ -8,6 +8,5 @@ meteor-platform
 accounts-facebook
 accounts-ui
 meteorhacks:npm
-
-
 npm-container
+stolinski:stylus-multi
