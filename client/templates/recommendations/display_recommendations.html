@@ -4,6 +4,8 @@
       {{#each recommendations}}
         {{> recommendation}}
       {{/each}}
+    {{else}}
+      {{getRecommendations}}
     {{/if}}
   {{else}}
     {{> getToken}}  

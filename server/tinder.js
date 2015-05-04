@@ -19,5 +19,8 @@ var getRecommendationsSync = Async.wrap(getRecommendations);
 Meteor.methods({
   getRecommendations: function(token) {
     return getRecommendationsSync(token)
+  },
+  insertRecommendation: function(recommendation) {
+    return Recommendations.insert(recommendation);
   }
 });
