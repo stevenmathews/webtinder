@@ -9,7 +9,9 @@
 
     <div class="photos">
       {{#each photos}}
-        <img src="{{this.url}}">
+        {{#unless unknownPhoto this.id}}
+          <img src="{{this.url}}">
+        {{/unless}}
       {{/each}}
     </div>
   </div>  

@@ -8,5 +8,8 @@ Template.recommendation.helpers({
     var kmsPerMile = 1.60934
     var kms = (distanceMi * kmsPerMile).toFixed(2);
     return kms;
+  },
+  unknownPhoto: function (photoId) {
+    return photoId === "unknown";
   }
 });
