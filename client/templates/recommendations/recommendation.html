@@ -1,10 +1,16 @@
 <template name="recommendation">
   <div class="recommendation">
-    <h2>{{name}}</h2>
+    <h2>{{name}} - {{dateToAge birthDate}}</h2>
     
     <div class="details">
-      <p>{{distance}}</p>
+      <p>{{distance distanceMi}} kms</p>
       <p>{{bio}}</p>
+    </div>
+
+    <div class="photos">
+      {{#each photos}}
+        <img src="{{this.url}}">
+      {{/each}}
     </div>
   </div>  
 </template>

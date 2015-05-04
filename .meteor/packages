@@ -10,3 +10,4 @@ accounts-ui
 meteorhacks:npm
 npm-container
 stolinski:stylus-multi
+momentjs:moment
