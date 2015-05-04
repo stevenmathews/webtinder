@@ -1,0 +1,17 @@
+<head>
+  <title>webTinder</title>
+</head>
+
+<body>
+  <header>
+    <h1>webTinder</h1>
+    {{> loginButtons}}
+  </header>
+
+  <main>
+    {{#if currentUser}}
+    {{else}}
+      {{> signIn}}
+    {{/if}}
+  </main>
+</body>
