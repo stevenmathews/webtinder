@@ -10,6 +10,9 @@
 
   <main>
     {{#if currentUser}}
+      <div id="recommendations">
+        {{> displayRecommendations}}
+      </div>
     {{else}}
       {{> signIn}}
     {{/if}}
