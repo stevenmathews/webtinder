@@ -1,7 +1,11 @@
 <template name="displayRecommendations">
-  {{#if recommendations}}
-    {{#each recommendations}}
-      {{> recommendation}}
-    {{/each}}
+  {{#if token}}
+    {{#if recommendations}}
+      {{#each recommendations}}
+        {{> recommendation}}
+      {{/each}}
+    {{/if}}
+  {{else}}
+    {{> getToken}}  
   {{/if}}
 </template>

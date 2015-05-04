@@ -1,0 +1,19 @@
+<template name="getToken">
+  <div id="get-token-text">
+    <h3>Authorisation Token Needed</h3>
+    <ol>
+      <li>
+        Click <a class="token-url" target="_blank" href="https://www.facebook.com/dialog/oauth?client_id=464891386855067&redirect_uri=https://www.facebook.com/connect/login_success.html&scope=basic_info,email,public_profile,user_about_me,user_activities,user_birthday,user_education_history,user_friends,user_interests,user_likes,user_location,user_photos,user_relationship_details&response_type=token">
+        here</a>
+      </li> 
+      <li>Copy the URL before it disappears!</li>
+      <li>
+        Paste below and click "Go"
+        <form>
+          <input type="text" name="url">
+          <button type="submit" id="submit-token-url">Go</button>
+        </form>
+      </li>
+    </ol>
+  </div>
+</template>
