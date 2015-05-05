@@ -13,3 +13,22 @@ Template.recommendation.helpers({
     return photoId === "unknown";
   }
 });
+
+Template.recommendation.events({
+  'click #pass': function () {
+    var recommendationId = this._id;
+    var token = Session.get('token');
+    Meteor.call("pass", this.tinderUserId, token, function(err, res) {
+      if (err) { throw err }
+      if (res.status === 200)
+        Meteor.call("remove", recommendationId, function(err, res) {
+          if (err) { throw err }
+          if (res === 1) {
+            console.log('Passed');
+          } else {
+            console.log('Please Refresh Browser');
+          }
+        });
+    });
+  }
+});

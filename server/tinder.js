@@ -35,6 +35,9 @@ Meteor.methods({
   },
   pass: function (tinderUserId, token) {
     return passSync(tinderUserId, token);
+  },
+  remove: function (recommendationId) {
+    return Recommendations.remove(recommendationId);
   }
 });
 
