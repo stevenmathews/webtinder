@@ -14,7 +14,17 @@ function getRecommendations(token, callback) {
   });
 }
 
+function pass (tinderUserId, token, callback) {
+  client.authorize(token, currentUserFacebookId, function () {
+    client.pass(tinderUserId, function (err, data) {
+      if (err) { return callback(err) }
+      callback(null, data)
+    })
+  })
+}
+
 var getRecommendationsSync = Async.wrap(getRecommendations);
+var passSync = Async.wrap(pass);
 
 Meteor.methods({
   getRecommendations: function(token) {
@@ -22,6 +32,9 @@ Meteor.methods({
   },
   insertRecommendation: function(recommendation) {
     return Recommendations.insert(recommendation);
+  },
+  pass: function (tinderUserId, token) {
+    return passSync(tinderUserId, token);
   }
 });
 
