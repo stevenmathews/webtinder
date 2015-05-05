@@ -53,5 +53,3 @@ Meteor.methods({
     return Recommendations.remove(recommendationId);
   }
 });
-
-// Recommendations.remove({});

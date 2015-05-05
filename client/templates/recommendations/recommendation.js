@@ -24,9 +24,9 @@ Template.recommendation.events({
         Meteor.call("remove", recommendationId, function(err, res) {
           if (err) { throw err }
           if (res === 1) {
-            console.log('Passed');
+            sAlert.error('Passed');
           } else {
-            console.log('Please Refresh Browser');
+            sAlert.error('Please Refresh Browser!');
           }
         });
     });
@@ -45,9 +45,9 @@ Template.recommendation.events({
         Meteor.call("remove", recommendationId, function(err, res) {
           if (err) { throw err }
           if (res === 1) {
-            console.log('Liked');
+            sAlert.success('Liked', {position: 'top-right'});
           } else {
-            console.log('Please Refresh Browser');
+            sAlert.error('Please Refresh Browser!', {position: 'top-right'});
           }
         });
     });

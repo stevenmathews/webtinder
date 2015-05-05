@@ -32,11 +32,11 @@ header
   color white
   .login-display-name
   .login-button
-    font-family 'Montserrat', sans-serif 
+    font-family 'Montserrat', sans-serif
 
 .wrapper
   lost-center 940px
-  
+
   #recommendations
     margin-top -50px
 
@@ -65,6 +65,22 @@ header
   .recommendation
     area white
     lost-utility clearfix
+
+    .buttons
+      margin-top 35px
+      // lost-column 1/1
+
+    #pass, #like
+      hover-pop 1.1 0deg true
+
+    #pass
+      lost-column 1/10
+      button(red, 12.5, white)
+
+    #like
+      lost-column 1/10
+      lost-move 8/10
+      button(green, 12.5, white)
 
     .details
       lost-column 1/1
