@@ -8,7 +8,6 @@ Template.displayRecommendations.helpers({
   getRecommendations: function() {
     var token = Session.get('token');
     Meteor.call('getRecommendations', token, function (err, results) {
-      console.log(results);
       results.forEach(function(result) {
         var recommendation = {
           userId: Meteor.userId(),
@@ -25,7 +24,6 @@ Template.displayRecommendations.helpers({
           name: result.name,
           photos: result.photos,
         }
-        console.log(recommendation);
         Meteor.call('insertRecommendation', recommendation);
       });
     });

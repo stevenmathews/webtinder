@@ -24,3 +24,5 @@ Meteor.methods({
     return Recommendations.insert(recommendation);
   }
 });
+
+// Recommendations.remove({});

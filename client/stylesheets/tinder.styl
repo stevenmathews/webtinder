@@ -6,9 +6,6 @@ normalize-html5()
 gray = #383939
 orange = #DE6C2A
 
-@lost
-  gutter 10px
-
 body
   background-image url("squares.png")
   font-family 'Montserrat', sans-serif
@@ -24,13 +21,24 @@ header
   h1
     lost-move 1/16
     color orange
-    margin 30px 0px
+    margin 300px 0px
+    display inline
+    position relative
+    top 8px
 
 #login-buttons
-  lost-move 5/6
+  lost-move 7/10
+  margin 35px
+  color white
+  .login-display-name
+  .login-button
+    font-family 'Montserrat', sans-serif 
 
 .wrapper
   lost-center 940px
+  
+  #recommendations
+    margin-top -50px
 
   #sign-in-text
   #get-token-text
@@ -53,3 +61,16 @@ header
       outline 2px solid orange
     #submit-token-url
       button(orange, 12.5, white)
+
+  .recommendation
+    area white
+    lost-utility clearfix
+
+    .details
+      lost-column 1/1
+      margin 15px 0px
+
+    .photos
+      lost-column 1/1
+      img
+        lost-waffle 1/2

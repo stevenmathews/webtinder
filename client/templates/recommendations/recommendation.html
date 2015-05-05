@@ -3,8 +3,10 @@
     <h2>{{name}} - {{dateToAge birthDate}}</h2>
     
     <div class="details">
-      <p>{{distance distanceMi}} kms</p>
-      <p>{{bio}}</p>
+      <p><i class="fa fa-map-marker"></i> {{distance distanceMi}} kms</p>
+      {{#if bio}}
+        <p><i class="fa fa-info-circle"></i> {{bio}}</p>
+      {{/if}}
     </div>
 
     <div class="photos">
