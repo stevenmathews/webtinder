@@ -2,23 +2,3 @@
   <title>webTinder</title>
   <link rel="icon" href="logo.ico">
 </head>
-
-<body>
-  {{> sAlert}}
-  <header>
-    <h1>webTinder</h1>
-    {{> loginButtons}}
-  </header>
-
-  <div class="wrapper">
-    <main>
-      {{#if currentUser}}
-        <div id="recommendations">
-          {{> displayRecommendations}}
-        </div>
-      {{else}}
-        {{> signIn}}
-      {{/if}}
-    </main>
-  </div>
-</body>

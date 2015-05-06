@@ -14,3 +14,5 @@ momentjs:moment
 fortawesome:fontawesome
 juliancwirko:s-alert
 juliancwirko:s-alert-scale
+iron:router
+sacha:spin

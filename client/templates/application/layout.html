@@ -1,0 +1,19 @@
+<template name="layout">
+  {{> sAlert}}
+  <header>
+    <h1>webTinder</h1>
+    {{> loginButtons}}
+  </header>
+
+  <div class="wrapper">
+    <main>
+      {{#if currentUser}}
+        <div id="recommendations">
+          {{> yield}}
+        </div>
+      {{else}}
+        {{> signIn}}
+      {{/if}}
+    </main>
+  </div>
+</template>
