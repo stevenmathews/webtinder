@@ -6,8 +6,9 @@ Template.displayRecommendations.helpers({
     return Recommendations.find().fetch();
   },
   getRecommendations: function() {
+    var userId = Meteor.userId();
     var token = Session.get('token');
-    Meteor.call('getRecommendations', token, function (err, results) {
+    Meteor.call('getRecommendations', userId, token, function (err, results) {
       if (err) { throw err }
       processResults(results);
       insertProcessedResults(recommendations);

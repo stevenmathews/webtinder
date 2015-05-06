@@ -17,8 +17,9 @@ Template.recommendation.helpers({
 Template.recommendation.events({
   'click #pass': function () {
     var recommendationId = this._id;
+    var userId = Meteor.userId();
     var token = Session.get('token');
-    Meteor.call("pass", this.tinderUserId, token, function(err, res) {
+    Meteor.call("pass", userId, this.tinderUserId, token, function(err, res) {
       if (err) { throw err }
       if (res.status === 200)
         Meteor.call("remove", recommendationId, function(err, res) {
@@ -33,8 +34,9 @@ Template.recommendation.events({
   },
   'click #like': function () {
     var recommendationId = this._id;
+    var userId = Meteor.userId();
     var token = Session.get('token');
-    Meteor.call("like", this.tinderUserId, token, function(err, res) {
+    Meteor.call("like", userId, this.tinderUserId, token, function(err, res) {
       if (err) { throw err }
       if (res.match === false) {
         console.log("No Match");
