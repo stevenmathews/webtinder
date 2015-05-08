@@ -5,6 +5,9 @@ normalize-base()
 gray = #383939
 orange = #DE6C2A
 
+rupture.scale = 0 400px 600px 800px 1050px 1800px
+rupture.scale-names = 'xs' 's' 'm' 'l' 'xl' 'hd'
+
 html
   font-size 16px
 
@@ -29,12 +32,19 @@ header
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    +below('s')
+      display none
   #login-buttons
     font-size 1.5em
     margin-right 1em
     float right
     color white
+    +below('s')
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
     .login-display-name
+      display none
     .login-button
       font-family 'Montserrat', sans-serif
 
@@ -64,9 +74,14 @@ header
       button(orange, 12%, white)
 
   .recommendation
-    font-size 1.6em
     area white
     lost-utility clearfix
+
+    h2
+      font-size 2.5em
+
+    p
+      font-size 1.5em
 
     .buttons
       margin-top 2em
@@ -84,7 +99,11 @@ header
 
     .details
       margin 1.5em 0em
+      i
+        margin-right 0.5em
 
     .photos
       img
         lost-waffle 1/2
+        +below('s')
+          lost-waffle 1/1
