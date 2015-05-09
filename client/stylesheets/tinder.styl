@@ -5,16 +5,17 @@ normalize-base()
 gray = #383939
 orange = #DE6C2A
 
-rupture.scale = 0 400px 600px 800px 1050px 1800px
+rupture.scale = 0 400px 700px 900px 1050px 1800px
 rupture.scale-names = 'xs' 's' 'm' 'l' 'xl' 'hd'
+rupture.enable-em-breakpoints = true
+rupture.base-font-size = 10px
 
 html
-  font-size 16px
+  font-size 62.5%
 
 body
   background-image url("squares.png")
   font-family 'Montserrat', sans-serif
-  font-size 62.5%
   .s-alert-success
   .s-alert-error
     font-size 1.6em
@@ -32,14 +33,14 @@ header
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    +below('s')
+    +below('xs')
       display none
   #login-buttons
     font-size 1.5em
     margin-right 1em
     float right
     color white
-    +below('s')
+    +below('xs')
       position: relative;
       top: 50%;
       transform: translateY(-50%);
@@ -66,7 +67,7 @@ header
         color orange
     input
       margin 2em 1.2em 0em 0em
-      width 80%
+      width 76%
       height 2em
     input:focus
       outline 0.22em solid orange
@@ -76,32 +77,22 @@ header
   .recommendation
     area white
     lost-utility clearfix
-
     h2
       font-size 2.5em
-
     p
       font-size 1.5em
-
     .buttons
       margin-top 2em
-
     #pass:active
     #like:active
       hover-pop 1.2 0deg true
-
     #pass
       button(red, 15%, white)
-
     #like
       float right
       button(green, 15%, white)
-
     .details
       margin 1.5em 0em
-      i
-        margin-right 0.5em
-
     .photos
       img
         lost-waffle 1/2
