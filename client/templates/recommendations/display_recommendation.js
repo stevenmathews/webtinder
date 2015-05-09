@@ -3,7 +3,8 @@ Template.displayRecommendations.helpers({
     return Session.get('token');
   },
   recommendations: function() {
-    return Recommendations.find().fetch();
+    var userId = Meteor.userId();
+    return Recommendations.find({userId: userId}).fetch();
   },
   getRecommendations: function() {
     var userId = Meteor.userId();
